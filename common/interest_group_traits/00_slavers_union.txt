@@ -1,0 +1,43 @@
+﻿ig_trait_slave_stability = {
+	icon = "gfx/interface/icons/ig_trait_icons/noblesse_oblige.dds"
+
+	# type is for display order
+	type = in_government
+
+	min_approval = loyal
+	
+	modifier = {
+
+		state_assimilation_mult = -0.25
+		state_political_strength_from_discrimination_mult = -0.25
+		state_rich_standard_of_living_add = 3
+	}
+}
+
+ig_trait_collective_obligation = {
+	icon = "gfx/interface/icons/ig_trait_icons/family_ties.dds"
+
+	# type is for display order
+	type = happy
+
+	min_approval = happy
+	
+	modifier = {
+		state_construction_mult = 0.1
+		state_migration_pull_mult = -0.25
+	}
+}
+
+ig_trait_harsh_measures = {
+	icon = "gfx/interface/icons/ig_trait_icons/noble_privileges.dds"
+
+	# type is for display order
+	type = unhappy
+
+	max_approval = unhappy
+	
+	modifier = {
+		state_poor_standard_of_living_add = -2
+		state_slaves_mortality_mult = 0.05
+	}
+}

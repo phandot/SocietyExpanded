@@ -1,0 +1,13 @@
+{
+	"name" : "Slavery Extended",
+	"id" : "",
+	"version" : "1.0.0",
+	"picture" : "thumbnail.png",
+	"supported_game_version" : "",
+	"short_description" : "Slavery Extended",
+	"tags" : ["Interest Groups", "Trade"],
+	"relationships" : [],
+	"game_custom_data" : {
+		"multiplayer_synchronized" : true
+	}
+}

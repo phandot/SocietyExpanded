@@ -1,0 +1,11 @@
+popneed_entertainment = {
+	default = entertainment
+	
+    entry = {
+		goods = entertainment
+		weight = 3
+		max_weight = 10.0 # Maxes out at 100% of supply share
+		min_weight = 0.0
+		
+	}
+}

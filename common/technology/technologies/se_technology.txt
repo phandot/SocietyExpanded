@@ -1,0 +1,13 @@
+building_stadium_tech = {
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/entertainment.dds"
+	category = society
+	
+	modifier = {
+		state_building_stadium_max_level_add = 2
+    }
+	
+	unlocking_technologies = {
+		urban_planning
+	}
+}

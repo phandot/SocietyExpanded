@@ -1,0 +1,10 @@
+﻿entertainment = {
+	texture = "gfx/interface/icons/goods_icons/entertainment.dds"
+	cost = 30
+	category = staple
+	
+	obsession_chance = 5.0
+	prestige_factor = 20
+	
+	traded_quantity = 15
+}

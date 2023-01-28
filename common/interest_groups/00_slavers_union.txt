@@ -1,0 +1,192 @@
+﻿ig_slavers_union = {
+	color = hsv{ 0.83 0.30 0.59 }
+	texture = "gfx/interface/icons/ig_icons/slaversunion.dds"
+	
+	ideologies = {
+		ideology_reactionary
+		ideology_pro_slavery
+		ideology_plutocratic
+	}
+	
+	enable = {
+		always = yes
+	}
+	
+	traits = {
+		ig_trait_slave_stability
+		ig_trait_collective_obligation
+		ig_trait_harsh_measures
+	}
+	
+	on_enable = {}
+	on_disable = {}
+	on_character_ig_membership = {}
+	
+	pop_potential = {
+		OR = {
+			is_pop_type = aristocrats
+			is_pop_type = clergymen
+			is_pop_type = officers
+			is_pop_type = farmers
+			is_pop_type = shopkeepers
+			is_pop_type = capitalists
+			is_pop_type = slavers
+		}		
+	}
+	
+	pop_weight = {
+		value = 0
+		add = {
+			desc = "POP_DISCRIMINATED"
+			if = {
+				limit = { 
+					pop_is_discriminated = yes
+				}
+				value = -1000
+			}
+		}
+	
+		add = {
+			desc = "POP_ARISTOCRATS"
+			if = {
+				limit = { 
+					is_pop_type = aristocrats
+				}
+				value = 100
+			}
+		}
+
+		add = {
+			desc = "POP_CLERGYMEN"
+			if = {
+				limit = { 
+					is_pop_type = clergymen
+				}
+				value = 75
+			}
+		}
+
+		add = {
+			desc = "POP_OFFICERS"
+			if = {
+				limit = { 
+					is_pop_type = officers
+				}
+				value = 100
+			}
+		}	
+
+		add = {
+			desc = "POP_FARMERS"
+			if = {
+				limit = { 
+					is_pop_type = farmers
+				}
+				value = 50
+			}
+		}
+
+		add = {
+			desc = "POP_SHOPKEEPERS"
+			if = {
+				limit = { 
+					is_pop_type = farmers
+				}
+				value = 125
+			}
+		}			
+		add = {
+			desc = "POP_CAPITALISTS"
+			if = {
+				limit = { 
+					is_pop_type = capitalists
+				}
+				value = 50
+			}
+		}
+		multiply = {
+			desc = "LEADER_POPULARITY"
+			scope:interest_group = {
+				leader = {
+					value = popularity
+					multiply = 0.0025
+					add = 1
+					max = 1.25
+					min = 0.75
+				}
+			}
+		}	
+	}
+	
+	monarch_weight = {
+		value = 1.25
+	}
+	
+	commander_weight = {
+		value = 1.25
+	}	
+	
+	noble_chance = {
+		value = 0.75
+	}
+	
+	female_commander_chance = {	
+		value = 0.1
+	}
+	
+	female_politician_chance = {
+		value = 0.1
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_own_property
+				}
+				
+			}
+			add = {
+				value = 0.05
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_women_in_the_workplace
+				}
+				
+			}
+			add = {
+				value = 0.05
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_law = law_type:law_womens_suffrage
+				}
+				
+			}
+			add = {
+				value = 0.05
+			}
+		}
+	}
+	
+	# The chance that a commander belonging to this IG takes over leadership when it changes
+	# scope:character is the most popular commander in the IG
+	commander_leader_chance = {
+		value = 0.35
+		if = {
+			limit = {
+				exists = scope:character
+			}
+			multiply = {
+				value = 1
+				add = scope:character.popularity
+				min = 0
+			}
+		}
+	}
+}

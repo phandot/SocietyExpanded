@@ -1,0 +1,115 @@
+﻿se_no_amenities = {
+	texture = "gfx/interface/icons/production_method_icons/market_stalls.dds"
+	
+}		
+
+se_light_amenities = {
+	texture = "gfx/interface/icons/production_method_icons/market_squares.dds"
+	
+	unlocking_technologies = { urban_planning }
+	
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_liquor_add = 2
+			building_input_meat_add = 2
+			building_output_entertainment_add = 20
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 500
+			building_employment_shopkeepers_add = 100
+		}
+		
+		unscaled = {
+			building_shopkeepers_shares_add = 5
+		}
+	}
+}
+
+se_modern_amenities = {
+	texture = "gfx/interface/icons/production_method_icons/covered_markets.dds"
+	unlocking_technologies = {
+		organized_sports
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			building_input_liquor_add = 5
+			building_input_groceries_add = 5
+			building_output_entertainment_add = 40
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 200
+			building_employment_capitalists_add = 100
+		}
+		
+		unscaled = {
+			building_shopkeepers_shares_add = 5
+		}
+	}
+}
+
+
+se_plays = {
+	texture = "gfx/interface/icons/production_method_icons/market_squares.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods													
+			building_output_entertainment_add = 40
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_aristocrats_add = 200
+			building_employment_academics_add = 500
+		}
+	}
+}
+
+se_gladiator = {
+	texture = "gfx/interface/icons/production_method_icons/market_squares.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods													
+			building_output_entertainment_add = 80
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_clerks_add = 200
+		}
+	}
+	state_modifiers = {						# these modifiers are applied to the state if this pm is active
+		workforce_scaled = {
+			state_slaves_mortality_mult = 0.01
+		}
+	}
+	unlocking_laws = {					# optional list of required laws to be able to activate this pm
+		law_slave_trade
+		law_debt_slavery
+		law_legacy_slavery
+	}
+}
+
+se_football = {
+	texture = "gfx/interface/icons/production_method_icons/covered_markets.dds"
+	unlocking_technologies = {
+		organized_sports
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods													
+			building_output_entertainment_add = 80
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 4000
+			building_employment_clerks_add = 200
+			building_employment_capitalists_add = 100
+		}
+	}
+}
