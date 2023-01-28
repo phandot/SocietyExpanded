@@ -39,9 +39,9 @@ law_slave_economy = {
 		
 	ai_will_do = {
 		OR = {
-			has_law = law_type:slave_trade
-			has_law = law_type:debt_slavery
-			has_law = law_type:legacy_slavery
+			has_law = law_type:law_slave_trade
+			has_law = law_type:law_debt_slavery
+			has_law = law_type:law_legacy_slavery
 		}
 	}
 }

@@ -1,6 +1,6 @@
 ﻿entertainment = {
 	texture = "gfx/interface/icons/goods_icons/entertainment.dds"
-	cost = 30
+	cost = 35
 	category = staple
 	
 	obsession_chance = 5.0
