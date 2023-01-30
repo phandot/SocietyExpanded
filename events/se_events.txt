@@ -1,0 +1,87 @@
+﻿
+se_effect_event.1 = {
+	type = country_event
+	placement = root
+	title = se_effect_event.1.t
+	desc = se_effect_event.1.d
+	flavor = se_effect_event.1.f
+	hidden = yes
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_london_center.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	cooldown = { months = normal_modifier_time }
+
+	trigger = {
+		NOT = { has_variable = se_startup_finished }
+	}
+
+	immediate = {
+		hidden_effect = {
+			
+			if = {
+				limit = {
+					NOT = {
+						has_variable = game_start_variable_law_se
+					}
+					year < 1837
+				}
+				set_variable = game_start_variable_law_se
+				if = {
+					limit = {
+						NOT = { 
+							has_law = law_type:law_slavery_banned
+						}
+					}
+					activate_law = law_type:law_slave_economy
+					activate_law = law_type:law_race_based
+				}
+				else_if = {
+					limit = {
+						NOT = { 
+							OR = {
+								has_law = law_type:law_monarchy
+								has_law = law_type:law_theocracy
+							}
+							
+						}
+						OR = {
+							has_law = law_type:law_ethnostate
+							has_law = law_type:law_national_supremacy
+							has_law = law_type:law_racial_segregation
+						}
+					}
+					activate_law = law_type:law_race_based
+				}
+				else_if = {
+					limit = {
+						NOT = { 
+							OR = {
+								has_law = law_type:law_monarchy
+								has_law = law_type:law_theocracy
+							}
+							
+						}
+					}
+					activate_law = law_type:law_wealth_based
+				}
+			}
+			set_variable = se_startup_finished
+		}
+	}
+
+	option = {
+		name = se_effect_event.1.a
+		default_option = yes
+		
+	}
+
+	
+}

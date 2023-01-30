@@ -1,0 +1,141 @@
+﻿
+law_slave_economy = {
+	group = lawgroup_economic_system
+	
+	icon = "gfx/interface/icons/law_icons/agrarianism.dds"
+	
+	progressiveness = 0
+	
+	disallowing_laws = {
+		law_slavery_banned
+	}
+	on_activate = {
+	}
+	
+	modifier = {
+		state_aristocrats_investment_pool_contribution_add = 0.5
+		state_construction_mult = 0.1
+		state_radicals_from_discrimination_mult = 0.1
+		state_non_homeland_mortality_mult = 0.1
+		state_slaves_mortality_mult = -0.1
+		country_subsidies_bg_agriculture = yes
+		country_subsidies_bg_ranching = yes
+		country_subsidies_bg_plantations = yes
+		country_subsidies_bg_infrastructure = yes
+		country_subsidies_bg_trade = yes
+	}
+
+	build_from_investment_pool = {
+		bg_agriculture
+		bg_plantations
+		bg_ranching
+		bg_infrastructure
+	}
+	
+	possible_political_movements = {
+		law_interventionism
+		law_command_economy
+		law_laissez_faire
+	}
+	
+		
+	ai_will_do = {
+		OR = {
+			has_law = law_type:law_slave_trade
+			has_law = law_type:law_debt_slavery
+			has_law = law_type:law_legacy_slavery
+		}
+	}
+	pop_support = {
+		value = 0
+		if = {
+			limit = { 
+				literacy_rate < 0.35
+				culture_accepted = yes
+				religion_accepted = yes
+			}
+			add = { 
+				value = 0.3
+			}
+		}
+		if = {
+			limit = { 
+				literacy_rate < 0.45
+				culture_accepted = yes
+				religion_accepted = yes
+			}
+			add = { 
+				value = 0.25
+			}
+		}
+		if = {
+			limit = { 
+				literacy_rate < 0.55
+				culture_accepted = yes
+				religion_accepted = yes
+			}
+			add = { 
+				value = 0.2
+			}
+		}
+		if = {
+			limit = { 
+				exists = ig:ig_slavers_union
+				ig:ig_slavers_union = { is_marginal = no }
+			}
+			add = { 
+				value = 0.1
+			}
+		}
+		if = {
+			limit = { 
+				exists = ig:ig_slavers_union
+				ig:ig_slavers_union = { is_powerful = yes }
+			}
+			add = { 
+				value = 0.2
+			}
+		}			
+		if = {
+			limit = { 
+				OR = {
+					culture_accepted = no
+					religion_accepted = no
+				}	
+			}
+			subtract = { 
+				value = 0.5
+			}
+		}
+		if = {
+			limit = { 
+				owner = {
+					NOT = {
+						OR = {
+							has_law = law_type:law_monarchy
+							has_law = law_type:law_theocracy
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.25
+			}	
+		}	
+		if = {
+			limit = {
+				exists = ruler
+				ruler = {
+					OR = {
+						has_ideology = ideology_jingoist_leader
+						has_ideology = ideology_fascist
+						has_ideology = ideology_ethno_nationalist
+					}
+				}
+			}
+			add = { 
+				value = 0.25
+			}
+		}
+	}
+}

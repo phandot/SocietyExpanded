@@ -1,0 +1,6 @@
+﻿# Root = Country
+on_monthly_pulse_country = {
+	events = {
+		se_effect_event.1
+	}
+}

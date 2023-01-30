@@ -1,0 +1,7 @@
+﻿
+lawgroup_class_system = {
+	law_group_category = power_structure
+	
+	progressive_movement_chance = 3
+	regressive_movement_chance = 0.5
+}

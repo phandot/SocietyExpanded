@@ -4,11 +4,10 @@ building_stadium = {
 	building_group = bg_urban_facilities
 	texture = "gfx/interface/icons/building_icons/building_stadium.dds"
 	city_type = city
-	required_construction = construction_cost_low
+	required_construction = construction_cost_medium
 	has_max_level = yes
 	levels_per_mesh = 2
 	production_method_groups = {
-		se_public_transport
 		se_stadium_amenities
 		se_stadium_type
 	}

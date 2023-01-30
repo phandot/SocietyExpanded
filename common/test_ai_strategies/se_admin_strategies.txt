@@ -312,8 +312,7 @@ ai_strategy_industrial_expansion = {
 		bg_rubber = 1.25
 		bg_oil_extraction = 1.25
 		bg_mining = 1.25
-		bg_logging = 1.25
-		se_stadium = 1.5		
+		bg_logging = 1.25	
 	}
 	
 	weight = {

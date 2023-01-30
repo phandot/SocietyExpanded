@@ -4,10 +4,23 @@ building_stadium_tech = {
 	category = society
 	
 	modifier = {
-		state_building_stadium_max_level_add = 1
+		state_building_stadium_max_level_add = 2
     }
 	
 	unlocking_technologies = {
 		urban_planning
+	}
+}
+building_mega_stadium_tech = {
+	era = era_3
+	texture = "gfx/interface/icons/goods_icons/entertainment.dds"
+	category = society
+	
+	modifier = {
+		state_building_stadium_max_level_add = 2
+    }
+	
+	unlocking_technologies = {
+		steel_frame_buildings
 	}
 }

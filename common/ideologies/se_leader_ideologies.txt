@@ -87,7 +87,7 @@ ideology_slaver = {
 			add = 500
 		}
 		if = {
-			limit = { scope:interest_group = { is_interest_group_type = ig_petite_bourgeoisie } }
+			limit = { scope:interest_group = { is_interest_group_type = ig_petty_bourgeoisie } }
 			add = 500
 		}
 		if = {
@@ -117,5 +117,29 @@ ideology_slaver = {
 			}
 			multiply = 0.1
 		}	
+	}
+}
+
+ideology_anti_slavery = {
+	icon = "gfx/interface/icons/ideology_icons/abolitionist.dds"
+	
+	lawgroup_slavery = {
+		law_slavery_banned = neutral
+		law_legacy_slavery = disapprove
+		law_debt_slavery = strongly_disapprove
+		law_slave_trade = strongly_disapprove
+	}
+
+	lawgroup_labor_rights = {
+		law_serfdom = disapprove
+		law_serfdom_banned = neutral
+	}
+	lawgroup_economic_system = {	
+		law_command_economy = neutral
+		law_interventionism = approve
+		law_agrarianism = neutral
+		law_traditionalism = disapprove	
+		law_laissez_faire = neutral
+		law_slave_economy = strongly_disapprove
 	}
 }

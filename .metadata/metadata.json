@@ -1,10 +1,10 @@
 {
 	"name" : "Slavery Extended",
 	"id" : "",
-	"version" : "1.0.0",
+	"version" : "",
 	"picture" : "thumbnail.png",
 	"supported_game_version" : "",
-	"short_description" : "Slavery Extended",
+	"short_description" : "The mod adds an additional interest group, the Slaver Guild. A pro slavery interest group of farmers, capitalists, and aristocrats that support slavery. Adds an additional economic system law, Slave Economy, that boosts construction cost and aristocratic investment in agriculture and mining at the cost of increased radicalism from discrimination. The mod also adds the stadium building that produces the new entertainment good. You can select the type of event to showcase at the stadium: aristocratic plays, gladiatorial combat, or football matches.",
 	"tags" : ["Interest Groups", "Trade"],
 	"relationships" : [],
 	"game_custom_data" : {

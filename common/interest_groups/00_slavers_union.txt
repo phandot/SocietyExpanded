@@ -1,6 +1,6 @@
 ﻿ig_slavers_union = {
 	color = hsv{ 0.83 0.30 0.59 }
-	texture = "gfx/interface/icons/ig_icons/slaversunion.dds"
+	texture = "gfx/interface/icons/ig_icons/slaversunion2.dds"
 	
 	ideologies = {
 		ideology_reactionary
@@ -30,29 +30,18 @@
 			is_pop_type = farmers
 			is_pop_type = shopkeepers
 			is_pop_type = capitalists
-			is_pop_type = slavers
 		}		
 	}
 	
 	pop_weight = {
 		value = 0
 		add = {
-			desc = "POP_DISCRIMINATED"
-			if = {
-				limit = { 
-					pop_is_discriminated = yes
-				}
-				value = -1000
-			}
-		}
-	
-		add = {
 			desc = "POP_ARISTOCRATS"
 			if = {
 				limit = { 
 					is_pop_type = aristocrats
 				}
-				value = 100
+				value = 45
 			}
 		}
 
@@ -62,7 +51,7 @@
 				limit = { 
 					is_pop_type = clergymen
 				}
-				value = 75
+				value = 15
 			}
 		}
 
@@ -72,7 +61,7 @@
 				limit = { 
 					is_pop_type = officers
 				}
-				value = 100
+				value = 45
 			}
 		}	
 
@@ -82,7 +71,7 @@
 				limit = { 
 					is_pop_type = farmers
 				}
-				value = 50
+				value = 15
 			}
 		}
 
@@ -90,9 +79,9 @@
 			desc = "POP_SHOPKEEPERS"
 			if = {
 				limit = { 
-					is_pop_type = farmers
+					is_pop_type = shopkeepers
 				}
-				value = 125
+				value = 50
 			}
 		}			
 		add = {
@@ -101,7 +90,119 @@
 				limit = { 
 					is_pop_type = capitalists
 				}
-				value = 50
+				value = 30
+			}
+		}
+		if = {
+			limit = { 
+				owner = {
+					OR = {
+						has_law = law_type:law_debt_slavery
+						has_law = law_type:law_slave_trade
+					}
+				}
+			}
+			add = {
+				value = 25
+			}	
+		}
+		if = {
+			limit = { 
+				owner = {
+					OR = {
+						has_law = law_type:law_legacy_slavery
+					}
+				}
+			}
+			add = {
+				value = 15
+			}	
+		}
+		if = {
+			limit = { 
+				owner = {
+					OR = {
+						has_law = law_type:law_slavery_banned
+					}
+				}
+			}
+			subtract = {
+				value = 15
+			}	
+		}
+		if = {
+			limit = { 
+				literacy_rate < 0.35
+				culture_accepted = yes
+				religion_accepted = yes
+			}
+			add = { 
+				value = 30
+			}
+		}
+		if = {
+			limit = { 
+				literacy_rate < 0.45
+				culture_accepted = yes
+				religion_accepted = yes
+			}
+			add = { 
+				value = 20
+			}
+		}
+		if = {
+			limit = { 
+				literacy_rate < 0.55
+				culture_accepted = yes
+				religion_accepted = yes
+			}
+			add = { 
+				value = 15
+			}
+		}
+		if = {
+			limit = { 
+				exists = ig:ig_slavers_union
+				ig:ig_slavers_union = { is_marginal = no }
+			}
+			add = { 
+				value = 15
+			}
+		}
+		if = {
+			limit = { 
+				exists = ig:ig_slavers_union
+				ig:ig_slavers_union = { is_powerful = yes }
+			}
+			add = { 
+				value = 15
+			}
+		}			
+		if = {
+			limit = { 
+				OR = {
+					culture_accepted = no
+					religion_accepted = no
+				}	
+			}
+			subtract = { 
+				value = 100
+			}
+		}
+
+		if = {
+			limit = {
+				exists = ruler
+				ruler = {
+					OR = {
+						has_ideology = ideology_jingoist_leader
+						has_ideology = ideology_fascist
+						has_ideology = ideology_ethno_nationalist
+					}
+				}
+			}
+			add = { 
+				value = 20
 			}
 		}
 		multiply = {

@@ -6,7 +6,6 @@
 		se_modern_amenities
 	}
 }
-
 se_stadium_type = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
 	production_methods = {
