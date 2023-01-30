@@ -1,4 +1,5 @@
-﻿ai_strategy_conservative_agenda = {
+﻿# Added references to new igs to this file so the ai will treat them properly.
+ai_strategy_conservative_agenda = {
 	icon = "gfx/interface/icons/ai_strategy_icons/conservative_agenda.dds"
 	
 	type = political

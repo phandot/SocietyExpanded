@@ -1,3 +1,4 @@
+# Add stadium tech to increase max building size of stadiums. Tech 1 goes fom 0 -> 2 and tech 2 goes from 2 -> 4
 building_stadium_tech = {
 	era = era_1
 	texture = "gfx/interface/icons/goods_icons/entertainment.dds"
@@ -22,5 +23,6 @@ building_mega_stadium_tech = {
 	
 	unlocking_technologies = {
 		steel_frame_buildings
+		building_stadium_tech
 	}
 }

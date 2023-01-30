@@ -1,4 +1,5 @@
 ﻿
+# Ideologies updated to add opinions for new laws.
 ideology_pro_slavery = {
 	icon = "gfx/interface/icons/ideology_icons/slaver.dds"
 

@@ -1,4 +1,5 @@
-﻿wealth_1 = {
+﻿# Add entertainment to buy packages. PS I really wish this gets handled better in the future.
+wealth_1 = {
 	political_strength = 0.03
 	goods = {
 		popneed_simple_clothing = 23

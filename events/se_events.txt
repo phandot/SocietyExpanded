@@ -1,4 +1,6 @@
-﻿
+﻿# This event runs at game start to adjust starting laws of countries dynamiclly. 
+# This only runs once to set the playing field without the need for manually changing all the history files for each country.
+# This should hopefully allow it to work better with other mods that change history files.
 se_effect_event.1 = {
 	type = country_event
 	placement = root
@@ -34,6 +36,7 @@ se_effect_event.1 = {
 					year < 1837
 				}
 				set_variable = game_start_variable_law_se
+				# If country has slavery they get slave economy and race based class system at game start.
 				if = {
 					limit = {
 						NOT = { 
@@ -43,6 +46,7 @@ se_effect_event.1 = {
 					activate_law = law_type:law_slave_economy
 					activate_law = law_type:law_race_based
 				}
+				# Else if country is not a monarch and has one of the discrimination laws they get raced based class system
 				else_if = {
 					limit = {
 						NOT = { 
@@ -60,6 +64,7 @@ se_effect_event.1 = {
 					}
 					activate_law = law_type:law_race_based
 				}
+				# Else if they are not a monarchy and have no discrimination (Haiti) they are wealth based class system.
 				else_if = {
 					limit = {
 						NOT = { 

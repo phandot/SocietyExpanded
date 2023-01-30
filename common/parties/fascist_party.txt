@@ -1,4 +1,5 @@
-﻿# Update to add Slavers Guild as fascist party specifically references other conservative igs. This is the only one of the conservative parties that reference igs, other parties don't require the same updates.
+﻿# Update to add Slavers Guild as fascist party specifically references other conservative igs. 
+# This is the only one of the conservative parties that reference igs, other parties don't require the same updates.
 # So adding here for completionists sake. The only change from base values is to add a single reference on line 297.
 fascist_party = {
 	color = { 50 60 198 }

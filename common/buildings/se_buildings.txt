@@ -1,6 +1,4 @@
-﻿# URBANIZATION
-
-building_stadium = {
+﻿building_stadium = {
 	building_group = bg_urban_facilities
 	texture = "gfx/interface/icons/building_icons/building_stadium.dds"
 	city_type = city

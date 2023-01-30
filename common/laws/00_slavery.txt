@@ -1,6 +1,6 @@
-﻿# group = this is the law_group a law belongs to
-# icon = graphical icon shown in-game
-# modifier = {} modifier on country for having adopted this law
+﻿# Change slave laws to use country_aristocrats_pol_str_mult
+# So it does not strengthen the landowners ig only, instead just the pops, this allows thier support to spilt up between other slave supporting parties.
+# Also added country_capitalists_pol_str_mult for debt slavery as this makes more sense to me.
 
 law_slavery_banned = {
 	group = lawgroup_slavery
