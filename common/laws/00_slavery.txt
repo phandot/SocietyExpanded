@@ -18,8 +18,8 @@ law_slavery_banned = {
 			text = liberate_slaves_tt
 			liberate_slaves = yes
 		}
+		deactivate_law = law_type:law_slave_economy
 	}
-	
 	modifier = {
 	}
 	
