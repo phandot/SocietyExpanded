@@ -26,6 +26,7 @@ se_effect_event.1 = {
 	}
 
 	immediate = {
+		
 		hidden_effect = {
 			
 			if = {
@@ -45,6 +46,7 @@ se_effect_event.1 = {
 					}
 					activate_law = law_type:law_slave_economy
 					activate_law = law_type:law_race_based
+					
 				}
 				# Else if country is not a monarch and has one of the discrimination laws they get raced based class system
 				else_if = {
@@ -85,8 +87,5 @@ se_effect_event.1 = {
 	option = {
 		name = se_effect_event.1.a
 		default_option = yes
-		
 	}
-
-	
 }
