@@ -48,7 +48,7 @@ ideology_slaver = {
 				is_interest_group_type = ig_landowners
 				is_interest_group_type = ig_devout
 				is_interest_group_type = ig_rural_folk
-				is_interest_group_type = ig_slavers_union
+				is_interest_group_type = ig_slavers_guild
 			}
 		}
 		scope:interest_group = {
@@ -92,7 +92,7 @@ ideology_slaver = {
 			add = 500
 		}
 		if = {
-			limit = { scope:interest_group = { is_interest_group_type = ig_slavers_union } }
+			limit = { scope:interest_group = { is_interest_group_type = ig_slavers_guild } }
 			add = 1500
 		}
 		if = {

@@ -14,3 +14,13 @@ se_stadium_type = {
 		se_football
 	}
 }
+pmg_se_sponsored_activities = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		se_no_focus
+		se_restaurants
+		se_daycares
+		se_military_parades
+		se_farmers_markets
+	}
+}
