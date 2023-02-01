@@ -151,10 +151,9 @@ se_restaurants = {
 			building_employment_shopkeepers_add = 250
 			building_employment_capitalists_add = 60
 		}
-		
 		unscaled = {
-			building_shopkeepers_shares_add = 2
-			building_capitalists_shares_add = 5
+			building_shopkeepers_shares_add = 1
+			building_capitalists_shares_add = 3
 		}
 	}
 	
@@ -171,11 +170,6 @@ se_daycares = {
 			building_employment_laborers_add = 700
 			building_employment_academics_add = 100
 		}
-		
-		unscaled = {
-			building_academics_shares_add = 2
-		}
-		
 	}
 	state_modifiers = {
 		workforce_scaled = {
@@ -195,12 +189,6 @@ se_military_parades = {
 			building_employment_soldiers_add = 800
 			building_employment_officers_add = 50
 		}
-		
-		unscaled = {
-			building_soldiers_shares_add = 2
-			building_officers_shares_add = 5
-		}
-		
 	}
 	state_modifiers = {
 		workforce_scaled = {
@@ -219,14 +207,10 @@ se_farmers_markets = {
 			building_employment_farmers_add = 700
 			building_employment_laborers_add = 300		
 		}
-		
-		unscaled = {
-			building_farmers_shares_add = 2
-		}
 	}
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult  = 0.01
+			state_birth_rate_mult  = 0.005
 		}
 	}
 }

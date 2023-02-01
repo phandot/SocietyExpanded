@@ -5,7 +5,7 @@ building_stadium_tech = {
 	category = society
 	
 	modifier = {
-		state_building_stadium_max_level_add = 2
+		state_building_stadium_max_level_add = 1
     }
 	
 	unlocking_technologies = {
@@ -18,7 +18,7 @@ building_mega_stadium_tech = {
 	category = society
 	
 	modifier = {
-		state_building_stadium_max_level_add = 2
+		state_building_stadium_max_level_add = 1
     }
 	
 	unlocking_technologies = {

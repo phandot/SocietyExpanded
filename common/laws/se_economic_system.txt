@@ -80,8 +80,8 @@ law_slave_economy = {
 		}
 		if = {
 			limit = { 
-				exists = ig:ig_slavers_union
-				ig:ig_slavers_union = { is_marginal = no }
+				exists = ig:ig_slavers_guild
+				ig:ig_slavers_guild = { is_marginal = no }
 			}
 			add = { 
 				value = 0.1
@@ -89,8 +89,8 @@ law_slave_economy = {
 		}
 		if = {
 			limit = { 
-				exists = ig:ig_slavers_union
-				ig:ig_slavers_union = { is_powerful = yes }
+				exists = ig:ig_slavers_guild
+				ig:ig_slavers_guild = { is_powerful = yes }
 			}
 			add = { 
 				value = 0.2
