@@ -13,9 +13,11 @@ law_slave_economy = {
 	}
 	
 	modifier = {
-		state_aristocrats_investment_pool_contribution_add = 0.25
-		state_capitalists_investment_pool_contribution_add = 0.25
-		state_construction_mult = 0.15
+		state_aristocrats_investment_pool_efficiency_mult = 0.25
+		state_farmers_investment_pool_efficiency_mult = 0.25
+		state_shopkeepers_investment_pool_efficiency_mult = -0.25	
+		state_capitalists_investment_pool_efficiency_mult = -0.25
+		country_private_construction_allocation_mult = 0.35
 		state_radicals_from_discrimination_mult = 0.1
 		state_non_homeland_mortality_mult = 0.025
 		state_slaves_mortality_mult = -0.1
@@ -31,12 +33,17 @@ law_slave_economy = {
 		bg_plantations
 		bg_ranching
 		bg_infrastructure
+		bg_whaling
+		bg_logging
+		bg_rubber
+		bg_fishing
 	}
 	
 	possible_political_movements = {
 		law_interventionism
 		law_command_economy
 		law_laissez_faire
+		law_cooperative_ownership
 	}
 	
 		
@@ -131,6 +138,8 @@ law_slave_economy = {
 						has_ideology = ideology_jingoist_leader
 						has_ideology = ideology_fascist
 						has_ideology = ideology_ethno_nationalist
+						has_ideology = ideology_slaver
+						has_ideology = ideology_traditionalist
 					}
 				}
 			}

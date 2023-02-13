@@ -155,7 +155,7 @@ law_strength_based = {
 			limit = { 
 				owner = {
 					OR = {
-						has_law = law_type:oligarchy
+						has_law = law_type:law_oligarchy
 					}
 				}
 			}
@@ -512,10 +512,8 @@ law_classless = {
 		value = 0
 		if = {
 			limit = { 
-				literacy_rate > 0.5
-				wealth < 15
-				culture_accepted = yes
-				religion_accepted = yes
+				literacy_rate > 0.6
+				wealth < 10
 			}
 			add = { 
 				value = 0.25
@@ -523,10 +521,8 @@ law_classless = {
 		}
 		if = {
 			limit = { 
-				literacy_rate > 0.6
-				wealth < 20
-				culture_accepted = yes
-				religion_accepted = yes
+				literacy_rate > 0.7
+				wealth < 15
 			}
 			add = { 
 				value = 0.35
@@ -535,9 +531,7 @@ law_classless = {
 		if = {
 			limit = { 
 				literacy_rate > 0.8
-				wealth < 25
-				culture_accepted = yes
-				religion_accepted = yes
+				wealth < 20
 			}
 			add = { 
 				value = 0.45
@@ -549,7 +543,7 @@ law_classless = {
 				ig:ig_trade_unions = { is_marginal = no }
 			}
 			add = { 
-				value = 0.15
+				value = 0.1
 			}
 		}
 		if = {
@@ -564,7 +558,7 @@ law_classless = {
 				}
 			}
 			add = {
-				value = 0.25
+				value = 0.15
 			}	
 		}
 		if = {
@@ -573,7 +567,7 @@ law_classless = {
 				ig:ig_trade_unions = { is_powerful = yes }
 			}
 			add = { 
-				value = 0.25
+				value = 0.15
 			}
 		}
 		subtract = {
@@ -593,6 +587,25 @@ law_classless = {
 				}
 				value = 1
 			}
-		}			
+		}
+		if = {
+			limit = { 
+				wealth > 25
+				culture_accepted = yes
+				religion_accepted = yes
+			}
+			subtract = { 
+				value = 0.5
+			}
+		}	
+		if = {
+			limit = { 
+				culture_accepted = yes
+				religion_accepted = yes
+			}
+			subtract = { 
+				value = 0.25
+			}
+		}		
 	}
 }

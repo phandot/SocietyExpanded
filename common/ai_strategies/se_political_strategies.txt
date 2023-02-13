@@ -1,15 +1,24 @@
-﻿# Added references to new igs to this file so the ai will treat them properly.
-ai_strategy_conservative_agenda = {
+﻿ai_strategy_conservative_agenda = {
 	icon = "gfx/interface/icons/ai_strategy_icons/conservative_agenda.dds"
 	
 	type = political
 	
-	revolution_aversion = 5 # Chance each day that the AI will stop enacting a law that is going to spark a civil war (1 aversion should translate into ~25% chance of avoiding a civil war) - also influences how flexible the AI is willing to be about its max progressiveness/regressiveness to avoid a revolution
-	min_law_chance_to_pass = 25 # If base chance for law to pass is below this, don't enact it
-	max_progressiveness = 50 # How progressive is the AI willing to be when passing laws
-	max_regressiveness = 25 # How regressive is the AI willing to be when passing laws
+	revolution_aversion = {
+		value = 5
+	}
 	
-	# Chance each update that the AI is willing to start changing a law (1 = 1%)
+	min_law_chance_to_pass = {
+		value = 25
+	}
+	
+	max_progressiveness = {
+		value = 50
+	}
+	
+	max_regressiveness = {
+		value = 25
+	}
+	
 	change_law_chance = { 
 		value = 2.5
 		
@@ -25,7 +34,7 @@ ai_strategy_conservative_agenda = {
 		ig_landowners
 		ig_armed_forces
 		ig_petty_bourgeoisie
-		ig_slavers_guild	
+		ig_slavers_guild
 	}
 	
 	institution_scores = {
@@ -78,12 +87,22 @@ ai_strategy_conservative_agenda = {
 ai_strategy_reactionary_agenda = {
 	icon = "gfx/interface/icons/ai_strategy_icons/reactionary_agenda.dds"
 	
-	revolution_aversion = 2.5 # Chance each day that the AI will stop enacting a law that is going to spark a civil war (1 aversion should translate into ~50% chance of avoiding a civil war) - also influences how flexible the AI is willing to be about its max progressiveness/regressiveness to avoid a revolution
-	min_law_chance_to_pass = 20 # If base chance for law to pass is below this, don't enact it
-	max_progressiveness = 25 # How progressive is the AI willing to be when passing laws
-	max_regressiveness = 100 # How regressive is the AI willing to be when passing laws
+	revolution_aversion = {
+		value = 2.5
+	}
 	
-	# Chance each update that the AI is willing to start changing a law (1 = 1%)
+	min_law_chance_to_pass = {
+		value = 20
+	}
+	
+	max_progressiveness = {
+		value = 25
+	}
+	
+	max_regressiveness = {
+		value = 100
+	}
+	
 	change_law_chance = { 
 		value = 3.5	
 	}	
@@ -182,12 +201,22 @@ ai_strategy_progressive_agenda = {
 	
 	type = political
 	
-	revolution_aversion = 2.5 # Chance each day that the AI will stop enacting a law that is going to spark a civil war (1 aversion should translate into ~50% chance of avoiding a civil war) - also influences how flexible the AI is willing to be about its max progressiveness/regressiveness to avoid a revolution
-	min_law_chance_to_pass = 20 # If base chance for law to pass is below this, don't enact it
-	max_progressiveness = 100 # How progressive is the AI willing to be when passing laws
-	max_regressiveness = 25 # How regressive is the AI willing to be when passing laws
+	revolution_aversion = {
+		value = 2.5
+	}
 	
-	# Chance each update that the AI is willing to start changing a law (1 = 1%)
+	min_law_chance_to_pass = {
+		value = 20
+	}
+	
+	max_progressiveness = {
+		value = 100
+	}
+	
+	max_regressiveness = {
+		value = 25
+	}
+	
 	change_law_chance = { 
 		value = 5	
 		
@@ -302,12 +331,22 @@ ai_strategy_egalitarian_agenda = {
 	
 	type = political
 	
-	revolution_aversion = 1 # Chance each day that the AI will stop enacting a law that is going to spark a civil war (1 aversion should translate into ~50% chance of avoiding a civil war) - also influences how flexible the AI is willing to be about its max progressiveness/regressiveness to avoid a revolution
-	min_law_chance_to_pass = 15 # If base chance for law to pass is below this, don't enact it
-	max_progressiveness = 1000 # How progressive is the AI willing to be when passing laws
-	max_regressiveness = 0 # How regressive is the AI willing to be when passing laws
+	revolution_aversion = {
+		value = 1
+	}
+	
+	min_law_chance_to_pass = {
+		value = 15
+	}
+	
+	max_progressiveness = {
+		value = 1000
+	}
+	
+	max_regressiveness = {
+		value = 0
+	}
 
-	# Chance each update that the AI is willing to start changing a law (1 = 1%)
 	change_law_chance = { 
 		value = 7.5	
 	}	
@@ -320,7 +359,7 @@ ai_strategy_egalitarian_agenda = {
 		ig_landowners
 		ig_industrialists
 		ig_petty_bourgeoisie
-		ig_slavers_guild	
+		ig_slavers_guild
 	}
 	
 	institution_scores = {
@@ -404,12 +443,22 @@ ai_strategy_nationalist_agenda = {
 	
 	type = political
 	
-	revolution_aversion = 2.5 # Chance each day that the AI will stop enacting a law that is going to spark a civil war (1 aversion should translate into ~50% chance of avoiding a civil war) - also influences how flexible the AI is willing to be about its max progressiveness/regressiveness to avoid a revolution
-	min_law_chance_to_pass = 20 # If base chance for law to pass is below this, don't enact it
-	max_progressiveness = 50 # How progressive is the AI willing to be when passing laws
-	max_regressiveness = 50 # How regressive is the AI willing to be when passing laws
+	revolution_aversion = {
+		value = 2.5
+	}
 	
-	# Chance each update that the AI is willing to start changing a law (1 = 1%)
+	min_law_chance_to_pass = {
+		value = 20
+	}
+	
+	max_progressiveness = {
+		value = 50
+	}
+	
+	max_regressiveness = {
+		value = 50
+	}
+	
 	change_law_chance = { 
 		value = 5	
 		
@@ -422,7 +471,7 @@ ai_strategy_nationalist_agenda = {
 	pro_interest_groups = {
 		ig_armed_forces
 		ig_petty_bourgeoisie
-		ig_slavers_guild	
+		ig_slavers_guild
 	}
 	
 	anti_interest_groups = {
@@ -465,10 +514,6 @@ ai_strategy_nationalist_agenda = {
 				exists = ig:ig_petty_bourgeoisie
 				ig:ig_petty_bourgeoisie = { is_marginal = no }
 			}
-			AND = {			
-				exists = ig:ig_slavers_guild
-				ig:ig_slavers_guild = { is_marginal = no }
-			}
 		}			
 	}
 	
@@ -506,7 +551,7 @@ ai_strategy_nationalist_agenda = {
 			}
 			
 			add = 10
-		}	
+		}
 		if = {
 			limit = {
 				exists = ig:ig_slavers_guild
@@ -514,7 +559,7 @@ ai_strategy_nationalist_agenda = {
 			}
 			
 			add = 10
-		}	
+		}		
 	}
 }
 
@@ -523,12 +568,22 @@ ai_strategy_maintain_mandate_of_heaven = {
 	
 	type = political
 
-	revolution_aversion = 5 # Chance each day that the AI will stop enacting a law that is going to spark a civil war (1 aversion should translate into ~50% chance of avoiding a civil war) - also influences how flexible the AI is willing to be about its max progressiveness/regressiveness to avoid a revolution
-	min_law_chance_to_pass = 50 # If base chance for law to pass is below this, don't enact it
-	max_progressiveness = 25 # How progressive is the AI willing to be when passing laws
-	max_regressiveness = 25 # How regressive is the AI willing to be when passing laws
+	revolution_aversion = {
+		value = 5
+	}
 	
-	# Chance each update that the AI is willing to start changing a law (1 = 1%)
+	min_law_chance_to_pass = {
+		value = 50
+	}
+	
+	max_progressiveness = {
+		value = 25
+	}
+	
+	max_regressiveness = {
+		value = 2
+	}
+	
 	change_law_chance = { 
 		value = 1
 	}	

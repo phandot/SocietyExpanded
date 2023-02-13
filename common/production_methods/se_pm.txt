@@ -180,7 +180,7 @@ se_daycares = {
 se_military_parades = {
 	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
 	building_modifiers = {
-		workforce_scaled = {0
+		workforce_scaled = {
 			building_output_services_add = 6
 			building_output_entertainment_add = 7
 		}
