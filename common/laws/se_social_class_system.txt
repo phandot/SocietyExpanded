@@ -25,6 +25,7 @@
 	possible_political_movements = {
 		law_race_based
 		law_wealth_based
+		law_strength_based
 	}	
 	
 	ai_will_do = {
@@ -104,18 +105,18 @@ law_strength_based = {
 	progressiveness = 25
 	
 	disallowing_laws = {
-		law_anarchy
 		law_universal_suffrage
 	}
 	on_activate = {
 	}
 	
 	modifier = {
-		country_soldiers_pol_str_mult = 0.5
-		country_army_power_projection_mult = 0.1
-		country_navy_power_projection_mult = 0.1
-		state_education_access_add = -0.15
-		state_mortality_mult  = 0.025
+		country_soldiers_pol_str_mult = 0.25
+		country_officers_pol_str_mult = 0.5
+		country_army_power_projection_mult = 0.15
+		country_navy_power_projection_mult = 0.15
+		state_education_access_add = -0.05
+		state_mortality_mult  = 0.01
 	}
 
 	possible_political_movements = {
