@@ -70,7 +70,7 @@ ideology_slaver = {
 					has_law = law_type:law_slavery_banned
 				}
 			}
-			add = -100
+			add = -1000
 		}
 		if = {
 			limit = {
