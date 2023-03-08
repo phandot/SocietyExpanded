@@ -295,6 +295,7 @@
 					is_interest_group_type = ig_industrialists
 					is_interest_group_type = ig_armed_forces
 					is_interest_group_type = ig_slavers_guild
+					is_interest_group_type = ig_homeland_faction
 				}
 				owner = {
 					any_interest_group = {

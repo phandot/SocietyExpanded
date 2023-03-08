@@ -1,0 +1,46 @@
+﻿
+### STADIUM
+
+ec_consider_building_stadium = {
+	ec_consider_building = {
+		building = building_stadium
+		critical = 0
+		shortage = 1
+		profitability = 1
+	}
+}
+
+ec_evaluate_building_stadium = {
+	OR = {
+		ec_requirements_exact = {
+			market_good = entertainment
+			priority = $priority$
+			offset = ec_industry_priority_4_exact_offset
+		}
+	}
+}
+
+ec_sanction_building_stadium = {
+	ec_sanction_industry = {
+		building = building_stadium
+		conditions = 0
+		shortage = 1
+		profitability = 1
+	}
+}
+
+ec_allocate_building_stadium = {
+	$priority$ = 1
+}
+
+### MODULAR COMPATIBILITY TRIGGERS
+
+ec_is_using_compatibility_patches = { always = yes }
+
+cp_building_type_array_is_correct_4 = {
+	ec_check_building_type_in_array = { number = 106 priority = 14 counter = 106 arable = 0 }
+}
+
+cp_number_is_under_construction_4 = {
+	trigger_if = { limit = { $number$ = 106 } ec_building_is_under_construction = { building = building_stadium } } trigger_else = { always = no }
+}

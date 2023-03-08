@@ -1,0 +1,21 @@
+﻿se_slavers_guild_collapse.1 = {
+	type = country_event
+	placement = root
+	hidden = yes
+
+	trigger = {
+		NOT = {
+			has_variable = slavers_guild_collapse_var
+		}
+		has_law = law_type:law_slavery_banned
+		any_interest_group = {
+			is_interest_group_type = ig_slavers_guild
+			is_marginal = yes
+			ig_clout < 0.03
+		}
+	}
+
+	immediate = {
+		set_variable = slavers_guild_collapse_var
+	}
+}

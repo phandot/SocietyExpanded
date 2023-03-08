@@ -41,3 +41,41 @@ ig_trait_harsh_measures = {
 		state_slaves_mortality_mult = 0.05
 	}
 }
+ig_trait_homeland_measures = {
+	icon = "gfx/interface/icons/ig_trait_icons/noble_privileges.dds"
+
+	# type is for display order
+	type = unhappy
+
+	max_approval = unhappy
+	
+	modifier = {
+		state_non_homeland_mortality_mult = 0.1
+		state_radicals_from_discrimination_mult = 0.1
+	}
+}
+ig_trait_nation_first = {
+	icon = "gfx/interface/icons/ig_trait_icons/family_ties.dds"
+
+	# type is for display order
+	type = happy
+
+	min_approval = happy
+	
+	modifier = {
+		state_accepted_birth_rate_mult = 0.1
+	}
+}
+
+ig_trait_national_fervour = {
+	icon = "gfx/interface/icons/ig_trait_icons/family_ties.dds"
+
+	# type is for display order
+	type = in_government
+
+	min_approval = loyal
+	
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
