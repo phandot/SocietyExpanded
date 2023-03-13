@@ -35,7 +35,6 @@
 		ig_armed_forces
 		ig_petty_bourgeoisie
 		ig_slavers_guild
-		ig_homeland_faction
 	}
 	
 	institution_scores = {
@@ -490,7 +489,6 @@ ai_strategy_nationalist_agenda = {
 		ig_armed_forces
 		ig_petty_bourgeoisie
 		ig_slavers_guild
-		ig_homeland_faction
 	}
 	
 	anti_interest_groups = {
@@ -536,10 +534,6 @@ ai_strategy_nationalist_agenda = {
 			AND = {			
 				exists = ig:ig_slavers_guild
 				ig:ig_slavers_guild = { is_marginal = no }
-			}
-			AND = {			
-				exists = ig:ig_homeland_faction
-				ig:ig_homeland_faction = { is_marginal = no }
 			}
 		}			
 	}
@@ -587,14 +581,6 @@ ai_strategy_nationalist_agenda = {
 			
 			add = 10
 		}	
-		if = {
-			limit = {
-				exists = ig:ig_homeland_faction
-				ig:ig_homeland_faction = { is_powerful = yes }
-			}
-			
-			add = 15
-		}
 	}
 }
 

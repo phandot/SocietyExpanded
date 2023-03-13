@@ -180,19 +180,23 @@ se_military_parades = {
 	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			building_output_services_add = 6
-			building_output_entertainment_add = 7
+			building_output_entertainment_add = 10
+			building_input_small_arms_add = 2
+			building_input_artillery_add = 2
 		}
 
 		level_scaled = {
-			building_employment_soldiers_add = 800
-			building_employment_officers_add = 50
+			building_employment_soldiers_add = 400
+			building_employment_officers_add = 20
 		}
 	}
 	state_modifiers = {
 		workforce_scaled = {
 			state_loyalists_from_sol_change_mult = 0.01
 		}
+	}
+	unscaled = {
+		building_oficers_shares_add = 2
 	}
 }
 se_farmers_markets = {
