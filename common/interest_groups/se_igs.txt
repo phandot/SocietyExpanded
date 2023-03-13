@@ -1,7 +1,7 @@
 ﻿ig_slavers_guild = {
 	color = hsv{ 0.83 0.30 0.59 }
 	texture = "gfx/interface/icons/ig_icons/slaversunion2.dds"
-	
+
 	ideologies = {
 		ideology_reactionary
 		ideology_pro_slavery
@@ -27,6 +27,7 @@
 			is_pop_type = aristocrats
 			is_pop_type = clergymen
 			is_pop_type = officers
+			is_pop_type = soldiers
 			is_pop_type = farmers
 			is_pop_type = shopkeepers
 			is_pop_type = capitalists
@@ -41,7 +42,7 @@
 				limit = { 
 					is_pop_type = aristocrats
 				}
-				value = 45
+				value = 50
 			}
 		}
 
@@ -51,7 +52,7 @@
 				limit = { 
 					is_pop_type = clergymen
 				}
-				value = 15
+				value = 20
 			}
 		}
 
@@ -61,7 +62,7 @@
 				limit = { 
 					is_pop_type = officers
 				}
-				value = 45
+				value = 50
 			}
 		}	
 
@@ -71,7 +72,7 @@
 				limit = { 
 					is_pop_type = farmers
 				}
-				value = 15
+				value = 20
 			}
 		}
 
@@ -81,7 +82,7 @@
 				limit = { 
 					is_pop_type = shopkeepers
 				}
-				value = 50
+				value = 20
 			}
 		}			
 		add = {
@@ -90,7 +91,16 @@
 				limit = { 
 					is_pop_type = capitalists
 				}
-				value = 30
+				value = 35
+			}
+		}
+		add = {
+			desc = "POP_SOLDIERS"
+			if = {
+				limit = { 
+					is_pop_type = soldiers
+				}
+				value = 15
 			}
 		}
 		if = {
@@ -103,7 +113,7 @@
 				}
 			}
 			add = {
-				value = 25
+				value = 35
 			}	
 		}
 		if = {
@@ -115,7 +125,7 @@
 				}
 			}
 			add = {
-				value = 15
+				value = 25
 			}	
 		}
 		if = {
@@ -127,7 +137,7 @@
 				}
 			}
 			subtract = {
-				value = 15
+				value = 20
 			}	
 		}
 		if = {
@@ -198,11 +208,13 @@
 						has_ideology = ideology_jingoist_leader
 						has_ideology = ideology_fascist
 						has_ideology = ideology_ethno_nationalist
+						has_ideology = ideology_slaver
+						has_ideology = ideology_traditionalist
 					}
 				}
 			}
 			add = { 
-				value = 20
+				value = 25
 			}
 		}
 		multiply = {

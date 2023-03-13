@@ -1,4 +1,4 @@
-building_output_entertainment_add = {
+﻿building_output_entertainment_add = {
 	good = yes
 	percent = no
 }
@@ -12,6 +12,10 @@ state_building_stadium_max_level_add = {
 	num_decimals = 0
 }
 building_input_entertainment_add = {
+	good = no
+	percent = no
+}
+building_input_wine_add = {
 	good = no
 	percent = no
 }

@@ -18,6 +18,7 @@
 		country_clergymen_pol_str_mult = 0.25
 		country_laborers_pol_str_mult = -0.25
 		country_farmers_pol_str_mult = -0.25
+		state_radicals_from_discrimination_mult = 0.33
 		state_radicals_from_sol_change_mult = 0.33
 
 	}
@@ -25,6 +26,7 @@
 	possible_political_movements = {
 		law_race_based
 		law_wealth_based
+		law_strength_based
 	}	
 	
 	ai_will_do = {
@@ -104,18 +106,18 @@ law_strength_based = {
 	progressiveness = 25
 	
 	disallowing_laws = {
-		law_anarchy
 		law_universal_suffrage
 	}
 	on_activate = {
 	}
 	
 	modifier = {
-		country_soldiers_pol_str_mult = 0.5
-		country_army_power_projection_mult = 0.1
-		country_navy_power_projection_mult = 0.1
-		state_education_access_add = -0.15
-		state_mortality_mult  = 0.025
+		country_soldiers_pol_str_mult = 0.25
+		country_officers_pol_str_mult = 0.5
+		country_army_power_projection_mult = 0.15
+		country_navy_power_projection_mult = 0.15
+		state_education_access_add = -0.05
+		state_mortality_mult  = 0.01
 	}
 
 	possible_political_movements = {
@@ -154,7 +156,7 @@ law_strength_based = {
 			limit = { 
 				owner = {
 					OR = {
-						has_law = law_type:oligarchy
+						has_law = law_type:law_oligarchy
 					}
 				}
 			}
@@ -246,7 +248,7 @@ law_race_based = {
 				religion_accepted = yes
 			}
 			add = { 
-				value = 0.3
+				value = 0.35
 			}
 		}
 		if = {
@@ -256,7 +258,7 @@ law_race_based = {
 				religion_accepted = yes
 			}
 			add = { 
-				value = 0.25
+				value = 0.3
 			}
 		}
 		if = {
@@ -377,7 +379,7 @@ law_wealth_based = {
 				wealth > 15
 			}
 			add = { 
-				value = 0.15
+				value = 0.2
 			}
 		}
 		if = {
@@ -385,7 +387,7 @@ law_wealth_based = {
 				wealth > 25
 			}
 			add = { 
-				value = 0.2
+				value = 0.25
 			}
 		}
 		if = {
@@ -511,10 +513,8 @@ law_classless = {
 		value = 0
 		if = {
 			limit = { 
-				literacy_rate > 0.5
-				wealth < 15
-				culture_accepted = yes
-				religion_accepted = yes
+				literacy_rate > 0.6
+				wealth < 10
 			}
 			add = { 
 				value = 0.25
@@ -522,10 +522,8 @@ law_classless = {
 		}
 		if = {
 			limit = { 
-				literacy_rate > 0.6
-				wealth < 20
-				culture_accepted = yes
-				religion_accepted = yes
+				literacy_rate > 0.7
+				wealth < 15
 			}
 			add = { 
 				value = 0.35
@@ -534,9 +532,7 @@ law_classless = {
 		if = {
 			limit = { 
 				literacy_rate > 0.8
-				wealth < 25
-				culture_accepted = yes
-				religion_accepted = yes
+				wealth < 20
 			}
 			add = { 
 				value = 0.45
@@ -548,7 +544,7 @@ law_classless = {
 				ig:ig_trade_unions = { is_marginal = no }
 			}
 			add = { 
-				value = 0.15
+				value = 0.1
 			}
 		}
 		if = {
@@ -563,7 +559,7 @@ law_classless = {
 				}
 			}
 			add = {
-				value = 0.25
+				value = 0.15
 			}	
 		}
 		if = {
@@ -572,7 +568,7 @@ law_classless = {
 				ig:ig_trade_unions = { is_powerful = yes }
 			}
 			add = { 
-				value = 0.25
+				value = 0.15
 			}
 		}
 		subtract = {
@@ -592,6 +588,25 @@ law_classless = {
 				}
 				value = 1
 			}
-		}			
+		}
+		if = {
+			limit = { 
+				wealth > 25
+				culture_accepted = yes
+				religion_accepted = yes
+			}
+			subtract = { 
+				value = 0.5
+			}
+		}	
+		if = {
+			limit = { 
+				culture_accepted = yes
+				religion_accepted = yes
+			}
+			subtract = { 
+				value = 0.25
+			}
+		}		
 	}
 }
