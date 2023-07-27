@@ -1,4 +1,4 @@
-GLOBAL = {
+﻿GLOBAL = {
 	every_country = {
 		# If country has slavery they get slave economy and race based class system at game start.
 		if = {

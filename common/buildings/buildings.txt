@@ -1,4 +1,4 @@
-building_urban_center = {
+﻿building_urban_center = {
 	building_group = bg_service
 	texture = "gfx/interface/icons/building_icons/urban_center.dds"
 	city_type = city
