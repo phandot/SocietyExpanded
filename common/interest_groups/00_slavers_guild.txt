@@ -11,11 +11,18 @@
 	enable = {
 		always = yes
 	}
-	
+	#Deprecated
 	traits = {
 		ig_trait_slave_stability
 		ig_trait_collective_obligation
 		ig_trait_harsh_measures
+	}
+	on_enable = {
+		ig:ig_slavers_guild = {
+			set_ig_trait = ig_trait:ig_trait_slave_stability
+			set_ig_trait = ig_trait_collective_obligation
+			set_ig_trait = ig_trait:ig_trait_harsh_measures
+		}
 	}
 	
 	on_enable = {}
