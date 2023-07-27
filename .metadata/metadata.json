@@ -4,7 +4,7 @@
 	"version" : "",
 	"picture" : "thumbnail.png",
 	"supported_game_version" : "",
-	"short_description" : "Adds a new interest group, building, good, law group, and some tweaks to other areas to integrate them better into the game. It is designed to add some extra flavor to the game.",
+	"short_description" : "",
 	"tags" : ["Interest Groups", "Trade", "Balance","Economy and Buildings","Technologies","Expansion"],
 	"relationships" : [],
 	"game_custom_data" : {

@@ -1,4 +1,4 @@
-popneed_entertainment = {
+﻿popneed_entertainment = {
 	default = entertainment
 	
     entry = {
